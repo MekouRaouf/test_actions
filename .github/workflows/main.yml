@@ -18,6 +18,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Set project as pages
+      uses: xRealNeon/VuePagesAction@1.0.1
+      with:
+        username: 'MekouRaouf'
+        reponame: 'test_actions'
+        token: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
@@ -25,7 +32,7 @@ jobs:
         cache: 'npm'
 
     - run: npm install
-    
+
     - run: npm ci
 
     - run: npm run build
