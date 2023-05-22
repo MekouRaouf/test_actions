@@ -41,7 +41,6 @@
 
     var datas = [0]
     var screenVal = ref('')
-    var total = 0
 
     const displayScreen = () => {
         var val = ''
