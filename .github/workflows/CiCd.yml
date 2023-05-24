@@ -33,6 +33,7 @@ jobs:
         run: npm run build
 
   push_to_registry:
+    needs: build
     runs-on: ubuntu-latest
 
     steps:
